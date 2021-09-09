@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+header nav {
+  width: 30%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li {
+  font-size: 2.5rem;
+}
+
+header nav ul li.active {
+  border: 1px solid white;
+  padding: 8px 35px;
+}
+
+.container {
+  z-index: 100;
+  color: white;
+  padding-left: 195px;
+  padding-right: 195px;
+  padding-top: 50px;
+}
+
+.container main {
+  display: flex;
+  height: 60vh;
+  margin-left: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container main h1 {
+  font-weight: 200;
+  font-size: 7rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.container main button {
+  margin-right: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 2.5rem;
+  font-weight: 200;
+  padding: 15px 70px;
+}
+
+.container main .reserveer {
+  color: black;
+  background-color: white;
+}
+
+.container main .menu {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-underline-offset: 10px;
+}
+
+.background {
+  background-image: url(../img/chef-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.background .overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.model {
+  position: absolute;
+  width: 545px;
+  height: 415px;
+  background-color: white;
+}

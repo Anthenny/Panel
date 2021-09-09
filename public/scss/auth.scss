@@ -1,0 +1,77 @@
+@import "base";
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .left {
+    flex: 0 0 50%;
+    overflow: hidden;
+  }
+
+  .right {
+    flex: 0 0 50%;
+    padding-left: 175px;
+    padding-right: 175px;
+    padding-top: 155px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 4.5rem;
+      letter-spacing: 5px;
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: 200;
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+
+      input {
+        padding: 20px 20px;
+        font-size: 1.5rem;
+        opacity: 0.6;
+        border-radius: 8px;
+        border: 1px solid $main-color;
+        margin-bottom: 50px;
+      }
+
+      button {
+        background-color: $main-color;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        padding: 18px 20px;
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+        transition: all 0.5s;
+        border: 1px solid $main-color;
+        cursor: pointer;
+        margin-bottom: 50px;
+
+        &:hover {
+          color: $main-color;
+          background-color: white;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        a {
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

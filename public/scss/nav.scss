@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+  }
+
+  nav {
+    width: 30%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      li {
+        font-size: 2.5rem;
+
+        &.active {
+          border: 1px solid white;
+          padding: 8px 35px;
+        }
+      }
+    }
+  }
+}
