@@ -28,12 +28,8 @@
       <main>
         <h1>Table for two</h1>
         <div class="buttons">
-          <button>
-            <a class="reserveer" href="./reserveren.html"> Reserveer </a>
-          </button>
-          <button class="menu">
-            <a href="./menu.html"> Bekijk menu </a>
-          </button>
+          <button class="btn-reserveren">Reserveren</button>
+          <button class="menu btn-menu">Bekijk menu</button>
         </div>
       </main>
     </div>
@@ -43,6 +39,7 @@
 
     <div class="modal-reserveren">
       <div class="box">
+        <div class="x close-reserveren"><p>X</p></div>
         <h1>Reserveren voor <span>Panel</span></h1>
 
         <form action="">
@@ -66,7 +63,7 @@
     <div class="modal-menukaart">
       <div class="box">
         <div class="header">
-          <div class="x"><p>X</p></div>
+          <div class="x close-menu"><p>X</p></div>
           <h1>Welkom bij <span>Panel</span></h1>
           <h4>'Casual cuisine in het hart van Rotterdam'</h4>
           <p>
@@ -97,5 +94,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../js/modalHome.js"></script>
   </body>
 </html>
