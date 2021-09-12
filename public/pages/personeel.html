@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/personeel.css" />
+    <title>Personeel || Panel</title>
+  </head>
+  <body>
+    <!-- //SIDEBAR -->
+    <div class="sidebar">
+      <div class="container">
+        <h1>Panel.</h1>
+
+        <div class="dashboard">
+          <h3>Dashboard</h3>
+          <div class="item">
+            <!-- <img src="../img/home.png" alt="icon" /> -->
+            <a href="./dashboard.html">Home</a>
+          </div>
+          <div class="item">
+            <!-- <img src="../img/restaurant.png" alt="icon" /> -->
+            <a href="./home.html">Ga naar restaurant </a>
+          </div>
+        </div>
+
+        <div class="quick-menu">
+          <h3>Quick Menu</h3>
+          <div class="item">
+            <!-- <img src="../img/person.png" alt="icon" /> -->
+            <a href="./personeel.html">Personeel</a>
+          </div>
+          <div class="item">
+            <!-- <img src="../img/menu.png" alt="icon" /> -->
+            <a href="./menukaart.html">Menukaart</a>
+          </div>
+          <div class="item">
+            <!-- <img src="../img/levering.png" alt="icon" /> -->
+            <a href="./leveringen.html">Leveringen</a>
+          </div>
+        </div>
+
+        <div class="logout">
+          <img src="../img/logout.png" alt="logout" />
+          <a href="#">Log out</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- //NAV -->
+    <header>
+      <h1>Welkom Anthenny</h1>
+      <img src="../img/person-1.png" alt="profiel foto" />
+    </header>
+
+    <div class="personeel__container">
+      <div class="personeel__tabel">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Gebruiker</th>
+            <th>Email</th>
+            <th>Functie</th>
+            <th>Actie</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Anthenny de Hoon</td>
+              <td>Anthenny@hotmail.com</td>
+              <td>Directeur</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Olaf de Jong</td>
+              <td>Olaf@hotmail.com</td>
+              <td>Architect</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Anna Pegels</td>
+              <td>Anna@hotmail.com</td>
+              <td>Software Developer</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Emir de Haas</td>
+              <td>Emir@hotmail.com</td>
+              <td>HBO</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Quincy Pieren</td>
+              <td>Quincy@hotmail.com</td>
+              <td>Scammer</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Achmed de Mo</td>
+              <td>Achie@hotmail.com</td>
+              <td>Directeur</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Mo de Dief</td>
+              <td>Mo@hotmail.com</td>
+              <td>Classified</td>
+              <td class="buttons">
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn-maak-gebruiker">Maak een gebruiker</button>
+      </div>
+    </div>
+
+    <div class="modal-maak-personeel">
+      <div class="box">
+        <h1>Maak een account</h1>
+
+        <form action="">
+          <div class="item">
+            <p>Gebruiker</p>
+            <input type="text" />
+          </div>
+          <div class="item">
+            <p>Email</p>
+            <input type="email" />
+          </div>
+          <div class="item">
+            <p>Functie</p>
+            <input type="text" />
+          </div>
+          <button>Voeg toe</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

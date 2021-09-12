@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #70b7ff;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.sidebar .container {
+  padding-left: 40px;
+  padding-top: 45px;
+}
+
+.sidebar .container h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 70px;
+}
+
+.sidebar .container .dashboard h3,
+.sidebar .container .quick-menu h3 {
+  font-weight: 500;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar .container .dashboard .item,
+.sidebar .container .quick-menu .item {
+  margin-bottom: 10px;
+}
+
+.sidebar .container .dashboard .item a,
+.sidebar .container .quick-menu .item a {
+  margin-left: 20px;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.sidebar .container .dashboard .item:last-child,
+.sidebar .container .quick-menu .item:last-child {
+  margin-bottom: 50px;
+}
+
+.sidebar .container .logout {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .container .logout img {
+  margin-right: 20px;
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
+.sidebar .container .logout a {
+  font-size: 2.5rem;
+}
+
+header {
+  height: 10vh;
+  width: 80%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 60px;
+  box-shadow: 1px 5px 11px 2px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+header img {
+  height: 70px;
+  width: 70px;
+}
+
+.personeel__container {
+  margin-left: 20%;
+  padding: 75px 160px;
+}
+
+.personeel__container .personeel__tabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 65px;
+  box-shadow: 0 5px 10px #e1e5ee;
+  width: 100%;
+  background-color: #f9fbff;
+}
+
+.personeel__container .personeel__tabel table {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 5px 10px #e1e5ee;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.personeel__container .personeel__tabel table thead {
+  box-shadow: 0 5px 10px #e1e5ee;
+}
+
+.personeel__container .personeel__tabel table thead th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.personeel__container .personeel__tabel table tr {
+  width: 100 .personeel__container .personeel__tabel table tr;
+}
+
+.personeel__container .personeel__tabel table td {
+  padding: 1.3rem 2rem;
+  font-size: 1.8rem;
+}
+
+.personeel__container .personeel__tabel table .btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: red;
+  padding: 0.4rem 1.4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.personeel__container .personeel__tabel table .btn-edit {
+  background-color: #0077ff;
+  border: #0077ff;
+  color: white;
+}
+
+.personeel__container .personeel__tabel table .btn-delete {
+  background-color: #eb0000;
+  border: 1px solid #eb0000;
+  color: white;
+}
+
+.personeel__container .personeel__tabel table tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+
+.personeel__container .personeel__tabel .btn-maak-gebruiker {
+  padding: 1rem 2rem;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  background-color: #70b7ff;
+  border: #70b7ff;
+  font-size: 2rem;
+  border-radius: 8px;
+  width: 250px;
+  align-self: flex-end;
+}
+
+.modal-maak-personeel {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-maak-personeel .box {
+  background-color: white;
+  width: 545px;
+  height: 415px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 40px 60px;
+}
+
+.modal-maak-personeel .box h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.modal-maak-personeel .box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-maak-personeel .box form .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.modal-maak-personeel .box form .item p {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.modal-maak-personeel .box form .item input {
+  border: 0.5px solid #70b7ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.modal-maak-personeel .box form .item input:focus {
+  outline: 0.3px solid #70b7ff;
+}
+
+.modal-maak-personeel .box form button {
+  color: white;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #70b7ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  border: 1px solid #70b7ff;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.modal-maak-personeel .box form button:hover {
+  color: #70b7ff;
+  background-color: white;
+}

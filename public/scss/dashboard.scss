@@ -1,0 +1,202 @@
+@import "base";
+@import "sidebar";
+@import "navDashboard";
+
+.dashboard-home {
+  margin-left: 20%;
+  padding: 50px 200px;
+
+  .btn-bekijken {
+    border: 1px solid $dashboard-blue;
+    color: white;
+    background-color: $dashboard-blue;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    align-self: flex-end;
+    justify-self: flex-end;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .home {
+      flex: 0 0 50%;
+      h1 {
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        span {
+          color: $dashboard-blue;
+        }
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 1.6rem;
+      }
+    }
+
+    .reserveringen {
+      width: 430px;
+      height: 250px;
+      padding: 20px 20px;
+      background-color: white;
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .reservering__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        h3 {
+          margin-right: 30px;
+        }
+      }
+
+      .reservering__item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        p {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .header {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .personeel {
+      flex: 0 0 30%;
+      padding: 25px 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+
+        img {
+          margin-right: 10px;
+          height: 70px;
+          width: 70px;
+          margin-bottom: 10px;
+        }
+
+        .item__details {
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-size: 1.4rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+    .laatste-leveringen {
+      padding: 25px 40px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      width: 630px;
+
+      table {
+        border-collapse: collapse;
+        box-shadow: 0 5px 10px $clr-gray300;
+        background-color: white;
+        text-align: left;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        thead {
+          box-shadow: 0 5px 10px $clr-gray300;
+
+          th {
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+        }
+
+        td {
+          padding: 1rem 2rem;
+          font-size: 1.4rem;
+        }
+
+        .status {
+          border-radius: $radius;
+          background-color: red;
+          padding: 0.2rem 1rem;
+          text-align: center;
+
+          &-pending {
+            background-color: $clr-pending;
+            color: $clr-pending-font;
+          }
+
+          &-paid {
+            background-color: $clr-paid;
+            color: $clr-paid-font;
+          }
+
+          &-unpaid {
+            background-color: $clr-unpaid;
+            color: $clr-unpaid-font;
+          }
+        }
+
+        .amount {
+          text-align: right;
+        }
+
+        // Color alternating
+
+        tr:nth-child(even) {
+          background-color: $clr-gray150;
+        }
+      }
+    }
+  }
+}

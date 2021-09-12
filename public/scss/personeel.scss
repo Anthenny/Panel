@@ -1,0 +1,167 @@
+@import "base";
+@import "sidebar";
+@import "navDashboard";
+
+.personeel__container {
+  margin-left: 20%;
+  padding: 75px 160px;
+
+  .personeel__tabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 65px;
+    box-shadow: 0 5px 10px $clr-gray300;
+    width: 100%;
+    background-color: $clr-gray100;
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      box-shadow: 0 5px 10px $clr-gray300;
+      background-color: white;
+      text-align: left;
+      overflow: hidden;
+      margin-bottom: 30px;
+      width: 100%;
+
+      thead {
+        box-shadow: 0 5px 10px $clr-gray300;
+
+        th {
+          padding: 1rem 2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          font-size: 2.4rem;
+          font-weight: 500;
+        }
+      }
+
+      tr {
+        width: 100&;
+      }
+
+      td {
+        padding: 1.3rem 2rem;
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: red;
+        padding: 0.4rem 1.4rem;
+        text-align: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &-edit {
+          background-color: $dashboard-edit;
+          border: $dashboard-edit;
+          color: white;
+        }
+
+        &-delete {
+          background-color: $dashboard-delete;
+          border: 1px solid $dashboard-delete;
+          color: white;
+        }
+      }
+
+      tr:nth-child(even) {
+        background-color: $clr-gray150;
+      }
+    }
+
+    .btn-maak-gebruiker {
+      padding: 1rem 2rem;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      background-color: $dashboard-blue;
+      border: #70b7ff;
+      font-size: 2rem;
+      border-radius: 8px;
+
+      width: 250px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.modal-maak-personeel {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .box {
+    background-color: white;
+    width: 545px;
+    height: 415px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 40px 60px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        p {
+          font-size: 2.5rem;
+          font-weight: 300;
+        }
+
+        input {
+          border: 0.5px solid $dashboard-blue;
+          padding: 10px 20px;
+          border-radius: 8px;
+          opacity: 0.8;
+
+          &:focus {
+            outline: 0.3px solid $dashboard-blue;
+          }
+        }
+      }
+
+      button {
+        color: white;
+        font-size: 1.8rem;
+        text-align: center;
+        background-color: $dashboard-blue;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all ease 0.2s;
+        border: 1px solid $dashboard-blue;
+        width: 50%;
+        align-self: flex-end;
+
+        &:hover {
+          color: $dashboard-blue;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
