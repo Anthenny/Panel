@@ -48,9 +48,52 @@
         margin-right: 20px;
         transform: scale(0.7);
         cursor: pointer;
+
+        @media (max-width: 1800px) {
+          margin-right: 0;
+          height: 30px;
+          width: 30px;
+          transform: scale(1);
+        }
       }
       a {
         font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 1800px) {
+    width: 10vw;
+    .container {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+        margin-top: 20%;
+      }
+      .dashboard,
+      .quick-menu {
+        img {
+          cursor: pointer;
+          height: 30px;
+          width: 30px;
+        }
+        h3 {
+          display: none;
+        }
+
+        .item {
+          a {
+            margin-left: 0;
+          }
+        }
+      }
+      .hidden-text {
+        display: none;
       }
     }
   }

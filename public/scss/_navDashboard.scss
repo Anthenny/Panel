@@ -16,4 +16,13 @@ header {
     height: 70px;
     width: 70px;
   }
+
+  @media (max-width: 1800px) {
+    width: 90%;
+    margin-left: 10%;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
 }

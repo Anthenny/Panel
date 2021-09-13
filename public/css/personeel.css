@@ -77,8 +77,51 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 1800px) {
+  .sidebar .container .logout img {
+    margin-right: 0;
+    height: 30px;
+    width: 30px;
+    transform: scale(1);
+  }
+}
+
 .sidebar .container .logout a {
   font-size: 2.5rem;
+}
+
+@media (max-width: 1800px) {
+  .sidebar {
+    width: 10vw;
+  }
+  .sidebar .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar .container h1 {
+    font-size: 3rem;
+    margin-top: 20%;
+  }
+  .sidebar .container .dashboard img,
+  .sidebar .container .quick-menu img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+  .sidebar .container .dashboard h3,
+  .sidebar .container .quick-menu h3 {
+    display: none;
+  }
+  .sidebar .container .dashboard .item a,
+  .sidebar .container .quick-menu .item a {
+    margin-left: 0;
+  }
+  .sidebar .container .hidden-text {
+    display: none;
+  }
 }
 
 header {
@@ -100,6 +143,16 @@ header h1 {
 header img {
   height: 70px;
   width: 70px;
+}
+
+@media (max-width: 1800px) {
+  header {
+    width: 90%;
+    margin-left: 10%;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
 }
 
 .personeel__container {
@@ -187,6 +240,21 @@ header img {
   border-radius: 8px;
   width: 250px;
   align-self: flex-end;
+}
+
+@media (max-width: 1800px) {
+  .personeel__container .personeel__tabel {
+    padding: 30px 60px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1800px) {
+  .personeel__container {
+    margin-left: 10%;
+    padding: 30px 0px;
+  }
 }
 
 .modal-maak-personeel {

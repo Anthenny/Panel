@@ -199,4 +199,14 @@
       }
     }
   }
+
+  @media (max-width: 1800px) {
+    margin-left: 10%;
+    padding: 50px 150px;
+  }
+
+  @media (max-width: 1450px) {
+    margin-left: 10%;
+    padding: 50px 80px;
+  }
 }
