@@ -12,7 +12,8 @@
   <?php 
     include '../components/sidebar.php';
     include '../components/navDashboard.php';
-
+    include_once '../../private/models/gebruikers.php';
+    $gebruikers = new Gebruikers();
     ?>
 
     <div class="personeel__container">
@@ -26,17 +27,20 @@
             <th>Actie</th>
           </thead>
           <tbody>
+
+            <?php foreach($gebruikers->getGebruikers() as $gebruiker) { ?>
             <tr>
-              <td>1</td>
-              <td>Anthenny de Hoon</td>
-              <td>Anthenny@hotmail.com</td>
-              <td>Directeur</td>
+              <td><?php echo $gebruiker['gebruikerId'] ?></td>
+              <td><?php echo $gebruiker['gebruikerNaam'] ?></td>
+              <td><?php echo $gebruiker['gebruikerEmail'] ?></td>
+              <td><?php echo $gebruiker['gebruikerFunctie'] ?></td>
               <td class="buttons">
                 <button class="btn btn-edit">Edit</button>
                 <button class="btn btn-delete">Delete</button>
               </td>
             </tr>
-            <tr>
+            <?php } ?>
+            <!-- <tr>
               <td>2</td>
               <td>Olaf de Jong</td>
               <td>Olaf@hotmail.com</td>
@@ -95,7 +99,7 @@
                 <button class="btn btn-edit">Edit</button>
                 <button class="btn btn-delete">Delete</button>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
         <button class="btn-maak-gebruiker">Maak een gebruiker</button>

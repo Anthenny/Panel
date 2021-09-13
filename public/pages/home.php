@@ -14,13 +14,13 @@
         <nav>
           <ul>
             <li class="active">
-              <a href="./home.html">Home</a>
+              <a href="./home.php">Home</a>
             </li>
             <li>
-              <a href="./menu.html">Menu</a>
+              <a href="./registreer.php">Registreren</a>
             </li>
             <li>
-              <a href="./login.html">Login</a>
+              <a href="./login.php">Login</a>
             </li>
           </ul>
         </nav>

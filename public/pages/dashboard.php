@@ -11,7 +11,6 @@
     <?php 
     include '../components/sidebar.php';
     include '../components/navDashboard.php';
-
     ?>
 
     <div class="dashboard-home">

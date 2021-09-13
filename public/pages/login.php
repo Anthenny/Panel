@@ -19,7 +19,7 @@
           <input type="text" placeholder="Vul uw naam in" />
           <input type="password" placeholder="Vul uw wachtwoord in" />
           <button type="submit">Login</button>
-          <p>Geen account? <a href="./registreer.html">Registreer nu!</a></p>
+          <p>Geen account? <a href="./registreer.php">Registreer nu!</a></p>
         </form>
       </div>
     </div>
