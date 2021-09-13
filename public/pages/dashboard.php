@@ -8,60 +8,11 @@
     <title>Dashboard || Panel</title>
   </head>
   <body>
-    <!-- //SIDEBAR -->
-    <div class="sidebar">
-      <div class="container">
-        <h1>Panel.</h1>
+    <?php 
+    include '../components/sidebar.php';
+    include '../components/navDashboard.php';
 
-        <div class="dashboard">
-          <h3>Dashboard</h3>
-          <div class="item">
-            <a href="./dashboard.html">
-              <img class="hidden-img" src="../img/home.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./dashboard.html">Home</a>
-          </div>
-          <div class="item">
-            <a href="./home.html">
-              <img class="hidden-img" src="../img/restaurant.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./home.html">Ga naar restaurant </a>
-          </div>
-        </div>
-
-        <div class="quick-menu">
-          <h3>Quick Menu</h3>
-          <div class="item">
-            <a href="./personeel.html">
-              <img class="hidden-img" src="../img/person.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./personeel.html">Personeel</a>
-          </div>
-          <div class="item">
-            <a href="./menukaart.html">
-              <img class="hidden-img" src="../img/menu.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./menukaart.html">Menukaart</a>
-          </div>
-          <div class="item">
-            <a href="./leveringen.html">
-              <img class="hidden-img" src="../img/levering.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./leveringen.html">Leveringen</a>
-          </div>
-        </div>
-
-        <div class="logout">
-          <img src="../img/logout.png" alt="logout" />
-          <a class="hidden-text" href="#">Log out</a>
-        </div>
-      </div>
-    </div>
-
-    <header>
-      <h1>Welkom Anthenny</h1>
-      <img src="../img/person-1.png" alt="profiel foto" />
-    </header>
+    ?>
 
     <div class="dashboard-home">
       <div class="top">
