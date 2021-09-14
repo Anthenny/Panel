@@ -28,12 +28,6 @@
             <a class="hidden-text" href="./personeel.php">Personeel</a>
           </div>
           <div class="item">
-            <a href="./menukaart.php">
-              <img class="hidden-img" src="../img/menu.png" alt="icon" />
-            </a>
-            <a class="hidden-text" href="./menukaart.php">Menukaart</a>
-          </div>
-          <div class="item">
             <a href="./leveringen.php">
               <img class="hidden-img" src="../img/levering.png" alt="icon" />
             </a>

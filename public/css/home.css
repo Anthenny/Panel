@@ -135,7 +135,6 @@ header nav ul li.active {
 .modal-reserveren .box {
   background-color: white;
   width: 545px;
-  height: 415px;
   border-radius: 8px;
   position: absolute;
   top: 50%;
@@ -144,13 +143,25 @@ header nav ul li.active {
   padding: 40px 60px;
 }
 
-.modal-reserveren .box h1 {
-  font-weight: 300;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.modal-reserveren .box .header {
+  position: relative;
 }
 
-.modal-reserveren .box h1 span {
+.modal-reserveren .box .header .close-reserveren {
+  position: absolute;
+  top: 13%;
+  right: 3%;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal-reserveren .box .header h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.modal-reserveren .box .header h1 span {
   color: #7d402b;
 }
 

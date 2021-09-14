@@ -20,55 +20,67 @@ a {
   color: white;
 }
 
-.container {
+.login__container,
+.registreer__container {
   height: 100vh;
   width: 100%;
   display: flex;
 }
 
-.container .left {
+.login__container .left,
+.registreer__container .left {
   flex: 0 0 50%;
   overflow: hidden;
 }
 
-.container .right {
+.login__container .right,
+.registreer__container .right {
   flex: 0 0 50%;
-  padding-left: 175px;
-  padding-right: 175px;
-  padding-top: 155px;
+  padding: 120px 175px;
 }
 
-.container .right h1 {
+.login__container .right h1,
+.registreer__container .right h1 {
   font-weight: 700;
   font-size: 4.5rem;
   letter-spacing: 5px;
   text-align: center;
 }
 
-.container .right h3 {
+.login__container .right h3,
+.registreer__container .right h3 {
   font-weight: 200;
   font-size: 4rem;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.container .right form {
+.login__container .right form,
+.registreer__container .right form {
   display: flex;
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
 }
 
-.container .right form input {
-  padding: 20px 20px;
-  font-size: 1.5rem;
+.login__container .right form input,
+.registreer__container .right form input {
+  padding: 15px 20px;
+  font-size: 1.7rem;
   opacity: 0.6;
   border-radius: 8px;
   border: 1px solid #7d402b;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.container .right form button {
+.login__container .right form input:focus,
+.registreer__container .right form input:focus {
+  outline: none;
+  border: 1px solid #7d402b;
+}
+
+.login__container .right form button,
+.registreer__container .right form button {
   background-color: #7d402b;
   border: none;
   color: white;
@@ -83,16 +95,19 @@ a {
   margin-bottom: 50px;
 }
 
-.container .right form button:hover {
+.login__container .right form button:hover,
+.registreer__container .right form button:hover {
   color: #7d402b;
   background-color: white;
 }
 
-.container .right form p {
+.login__container .right form p,
+.registreer__container .right form p {
   font-size: 2rem;
 }
 
-.container .right form p a {
+.login__container .right form p a,
+.registreer__container .right form p a {
   color: #7d402b;
   text-decoration: none;
 }

@@ -3,7 +3,7 @@
  class Db {
 
   private $gebruikersNaam = "root";
-  private $wachtwoord = "Anthennyanna1997";
+  private $wachtwoord = "";
   private $host = "localhost";
   private $dbName = "panel";
 

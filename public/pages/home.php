@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css//home.css" />
-    <title>Home || Panel</title>
+    <title>Home || Panel</title> 
   </head>
   <body>
     <div class="container">
@@ -23,7 +23,7 @@
               <a href="./login.php">Login</a>
             </li>
           </ul>
-        </nav>
+        </nav> 
       </header>
       <main>
         <h1>Table for two</h1>
@@ -39,8 +39,10 @@
 
     <div class="modal-reserveren">
       <div class="box">
-        <div class="x close-reserveren"><p>X</p></div>
-        <h1>Reserveren voor <span>Panel</span></h1>
+        <div class="header">
+          <div class="close-reserveren"><p>X</p></div>
+          <h1>Reserveren voor <span>Panel</span></h1>
+        </div>
 
         <form action="">
           <div class="item">
@@ -58,9 +60,9 @@
           <button>Reserveren</button>
         </form>
       </div>
-    </div>
+  
 
-    <div class="modal-menukaart">
+    <!-- <div class="modal-menukaart">
       <div class="box">
         <div class="header">
           <div class="x close-menu"><p>X</p></div>
@@ -92,8 +94,8 @@
           <p>Limoncello, citroen sorbet, amandel krokant</p>
           <p>Vers en gerijpte binnen- en buitenlandse kazen</p>
         </div>
-      </div>
-    </div>
+      </div> 
+    </div> -->
 
     <script src="../js/modalHome.js"></script>
   </body>

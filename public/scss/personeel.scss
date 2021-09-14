@@ -114,19 +114,31 @@
 
   .box {
     background-color: white;
-    width: 545px;
-    height: 415px;
+    width: 500px;
+    // height: 415px;
     border-radius: 8px;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    padding: 40px 60px;
+    padding: 30px 60px;
 
-    h1 {
-      font-weight: 400;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
+    .header {
+      position: relative;
+
+      .close-personeel {
+        position: absolute;
+        top: 13%;
+        right: 3%;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-weight: 400;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+      }
     }
 
     form {
@@ -136,10 +148,10 @@
       .item {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
         p {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 300;
         }
 

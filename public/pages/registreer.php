@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="../css/auth.css" />
     <title>Registreer || Panel</title>
   </head>
+  <body>
   <?php
   include_once '../../private/controllers/auth.controller.php';
   if(isset($_POST["registreren"])){
     $gebruiker = new AuthContr();
     $gebruiker->createGebruiker();
   }
-  ?>
-  <body>
-    <div class="container">
-      <div class="left"></div>
+  ?> 
+    <div class="registreer__container">
+      <div class="left">
+      <img src="../img/chef.png" alt="" />
+      </div>
       <div class="right">
         <h1>Registreren</h1>
         <h3>Welkom</h3>

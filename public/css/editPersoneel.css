@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #70b7ff;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.sidebar .container {
+  padding-left: 40px;
+  padding-top: 45px;
+}
+
+.sidebar .container h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 70px;
+}
+
+.sidebar .container .dashboard h3,
+.sidebar .container .quick-menu h3 {
+  font-weight: 500;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar .container .dashboard .item,
+.sidebar .container .quick-menu .item {
+  margin-bottom: 10px;
+}
+
+.sidebar .container .dashboard .item a,
+.sidebar .container .quick-menu .item a {
+  margin-left: 20px;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.sidebar .container .dashboard .item:last-child,
+.sidebar .container .quick-menu .item:last-child {
+  margin-bottom: 50px;
+}
+
+.sidebar .container .logout {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .container .logout img {
+  margin-right: 20px;
+  transform: scale(0.7);
+  cursor: pointer;
+}
+
+@media (max-width: 1800px) {
+  .sidebar .container .logout img {
+    margin-right: 0;
+    height: 30px;
+    width: 30px;
+    transform: scale(1);
+  }
+}
+
+.sidebar .container .logout a {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1800px) {
+  .sidebar {
+    width: 10vw;
+  }
+  .sidebar .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar .container h1 {
+    font-size: 3rem;
+    margin-top: 20%;
+  }
+  .sidebar .container .dashboard img,
+  .sidebar .container .quick-menu img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+  }
+  .sidebar .container .dashboard h3,
+  .sidebar .container .quick-menu h3 {
+    display: none;
+  }
+  .sidebar .container .dashboard .item a,
+  .sidebar .container .quick-menu .item a {
+    margin-left: 0;
+  }
+  .sidebar .container .hidden-text {
+    display: none;
+  }
+}
+
+header {
+  height: 10vh;
+  width: 80%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 60px;
+  box-shadow: 1px 5px 11px 2px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+header img {
+  height: 70px;
+  width: 70px;
+}
+
+@media (max-width: 1800px) {
+  header {
+    width: 90%;
+    margin-left: 10%;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+.edit__container {
+  margin-left: 20%;
+  padding: 75px 160px;
+}
+
+.edit__container .form__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.edit__container .form__container h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.edit__container .form__container form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit__container .form__container form .item {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.edit__container .form__container form .item p {
+  margin-right: 20px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.edit__container .form__container form .item input {
+  border: 0.5px solid #70b7ff;
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+.edit__container .form__container form .item input:focus {
+  outline: none;
+  border: 1px solid #70b7ff;
+}
+
+.edit__container .form__container form button {
+  width: 200px;
+  align-self: center;
+  border: 1px solid #70b7ff;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: #70b7ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}

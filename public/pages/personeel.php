@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,20 @@
     <title>Personeel || Panel</title>
   </head>
   <body>
-    
+     
   <?php 
     include '../components/sidebar.php';
     include '../components/navDashboard.php';
-    include_once '../../private/models/gebruikers.php';
-    $gebruikers = new Gebruikers();
+
+    
+    include_once '../../private/view/gebruiker.view.php';
+    include_once '../../private/controllers/gebruikers.controller.php';
+
+    $gebruikerView = new GebruikerView();
+    $gebruikerController = new GebruikerContr();
+
+    if(isset($_GET["deleteGebruikerId"])) $gebruikerController->removeGebruiker();
+    if(isset($_POST["add"])) $gebruikerController->createGebruiker();
     ?>
 
     <div class="personeel__container">
@@ -26,80 +34,20 @@
             <th>Functie</th>
             <th>Actie</th>
           </thead>
-          <tbody>
+          <tbody> 
 
-            <?php foreach($gebruikers->getGebruikers() as $gebruiker) { ?>
+            <?php foreach($gebruikerView->showGebruikers() as $gebruiker) { ?>
             <tr>
               <td><?php echo $gebruiker['gebruikerId'] ?></td>
               <td><?php echo $gebruiker['gebruikerNaam'] ?></td>
               <td><?php echo $gebruiker['gebruikerEmail'] ?></td>
               <td><?php echo $gebruiker['gebruikerFunctie'] ?></td>
               <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
+                <a href="editPersoneel.php?editGebruikerId=<?= $gebruiker['gebruikerId']?>" class="btn btn-edit">Edit</a>
+                <a href="personeel.php?deleteGebruikerId=<?= $gebruiker['gebruikerId']?>" class="btn btn-delete">Delete</a>
               </td>
             </tr>
             <?php } ?>
-            <!-- <tr>
-              <td>2</td>
-              <td>Olaf de Jong</td>
-              <td>Olaf@hotmail.com</td>
-              <td>Architect</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Anna Pegels</td>
-              <td>Anna@hotmail.com</td>
-              <td>Software Developer</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Emir de Haas</td>
-              <td>Emir@hotmail.com</td>
-              <td>HBO</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Quincy Pieren</td>
-              <td>Quincy@hotmail.com</td>
-              <td>Scammer</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Achmed de Mo</td>
-              <td>Achie@hotmail.com</td>
-              <td>Directeur</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Mo de Dief</td>
-              <td>Mo@hotmail.com</td>
-              <td>Classified</td>
-              <td class="buttons">
-                <button class="btn btn-edit">Edit</button>
-                <button class="btn btn-delete">Delete</button>
-              </td>
-            </tr> -->
           </tbody>
         </table>
         <button class="btn-maak-gebruiker">Maak een gebruiker</button>
@@ -108,27 +56,32 @@
 
     <div class="modal-maak-personeel">
       <div class="box">
-        <div class="close-personeel"><p>X</p></div>
-        <h1>Maak een account</h1>
+        <div class="header">
+          <div class="close-personeel"><p>X</p></div>
+          <h1>Maak een account</h1>
+        </div>
 
-        <form action="">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
           <div class="item">
             <p>Gebruiker</p>
-            <input type="text" />
+            <input type="text" name="naam" />
           </div>
           <div class="item">
             <p>Email</p>
-            <input type="email" />
+            <input type="email" name="email" />
+          </div>
+          <div class="item">
+            <p>Wachtwoord</p>
+            <input type="password" name="wachtwoord" />
           </div>
           <div class="item">
             <p>Functie</p>
-            <input type="text" />
+            <input type="text" name="functie" />
           </div>
-          <button>Voeg toe</button>
+          <button type="submit" name="add">Voeg toe</button>
         </form>
       </div>
     </div>
-
     <script src="../js/modalPersoneel.js"></script>
   </body>
 </html>

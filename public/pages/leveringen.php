@@ -97,14 +97,16 @@
             </tr>
           </tbody>
         </table>
-        <button class="btn-maak-gebruiker">Maak een gebruiker</button>
+        <button class="btn-maak-gebruiker">Maak een levering</button>
       </div>
     </div>
 
     <div class="modal-maak-personeel">
       <div class="box">
-        <div class="close-personeel"><p>X</p></div>
-        <h1>Maak een levering</h1>
+      <div class="header">
+          <div class="close-personeel"><p>X</p></div>
+          <h1>Maak een levering</h1>
+        </div>
 
         <form action="">
           <div class="item">
