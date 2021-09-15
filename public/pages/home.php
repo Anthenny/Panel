@@ -60,43 +60,6 @@
           <button>Reserveren</button>
         </form>
       </div>
-  
-
-    <!-- <div class="modal-menukaart">
-      <div class="box">
-        <div class="header">
-          <div class="x close-menu"><p>X</p></div>
-          <h1>Welkom bij <span>Panel</span></h1>
-          <h4>'Casual cuisine in het hart van Rotterdam'</h4>
-          <p>
-            Wij presenteren u smaakvolle gerechten en kiezen onze ingrediënten met zorg en respect
-            uit. 'Eigentijdse gastronomie vanuit de klassieke basis'
-          </p>
-        </div>
-
-        <div class="gerechten">
-          <h3>Voorgerechten</h3>
-          <p>Carnoli rijst, geroosterde groene asperges, gepekelde eidooier dragon</p>
-          <p>Gebakken, getoaste aubergine crème, courgette, mais, braadjus</p>
-          <p>Langzaam gegaard buikspek, aceto balsamico, gamba, rouille</p>
-        </div>
-
-        <div class="gerechten">
-          <h3>Hoofdgerechten</h3>
-          <p>Black angus, snijbonen, bataat, rode wijn jus</p>
-          <p>Kabeljauw, lamsoren, venkel</p>
-          <p>Eend, spitskool, dadelcrame, amandel</p>
-        </div>
-
-        <div class="gerechten">
-          <h3>Nagerechten</h3>
-          <p>Rabarber compote, rozen, hangop, yogurt-ijs</p>
-          <p>Limoncello, citroen sorbet, amandel krokant</p>
-          <p>Vers en gerijpte binnen- en buitenlandse kazen</p>
-        </div>
-      </div> 
-    </div> -->
-
     <script src="../js/modalHome.js"></script>
   </body>
 </html>
