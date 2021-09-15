@@ -52,7 +52,7 @@ header nav ul li.active {
   padding: 8px 35px;
 }
 
-.container {
+.home__container {
   z-index: 100;
   color: white;
   padding-left: 195px;
@@ -60,7 +60,7 @@ header nav ul li.active {
   padding-top: 50px;
 }
 
-.container main {
+.home__container main {
   display: flex;
   height: 60vh;
   margin-left: 50px;
@@ -68,7 +68,7 @@ header nav ul li.active {
   justify-content: center;
 }
 
-.container main h1 {
+.home__container main h1 {
   font-weight: 200;
   font-size: 7rem;
   letter-spacing: 5px;
@@ -76,7 +76,7 @@ header nav ul li.active {
   margin-bottom: 30px;
 }
 
-.container main button {
+.home__container main button {
   margin-right: 30px;
   border: none;
   cursor: pointer;
@@ -86,12 +86,12 @@ header nav ul li.active {
   padding: 15px 70px;
 }
 
-.container main .reserveer {
+.home__container main .reserveer {
   color: black;
   background-color: white;
 }
 
-.container main .menu {
+.home__container main .menu {
   background-color: transparent;
   color: white;
   text-decoration: underline;

@@ -1,3 +1,11 @@
+    <?php
+      include_once '../../private/controllers/auth.controller.php';
+      $authController = new AuthContr();
+      if(isset($_POST["logout"])) {
+        $authController->logout();
+      }
+    ?>
+    
     <!-- //SIDEBAR -->
     <div class="sidebar">
       <div class="container">
@@ -35,9 +43,10 @@
           </div>
         </div>
 
-        <div class="logout">
-          <img src="../img/logout.png" alt="logout" />
-          <a class="hidden-text" href="#">Log out</a>
-        </div>
+        <form class="logout" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+          
+            <img src="../img/logout.png" alt="logout" />
+            <button class="hidden-text" type="submit" name="logout">Log out</button>         
+        </form>
       </div>
     </div>

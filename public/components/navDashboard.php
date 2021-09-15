@@ -1,4 +1,17 @@
+<?php
+  session_start();
+?>
+
 <header>
-      <h1>Welkom Anthenny</h1>
+  <?php
+    if(isset($_SESSION["gebruikerNaam"])){ ?>
+      <h1>Welkom <?= $_SESSION["gebruikerNaam"]?></h1>
       <img src="../img/person-1.png" alt="profiel foto" />
-    </header>
+    
+    <?php }
+     else {
+      header('location: login.php?jemoeder'); 
+    }
+    ?>
+    
+</header>

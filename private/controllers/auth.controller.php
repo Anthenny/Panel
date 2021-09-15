@@ -13,7 +13,9 @@ class AuthContr extends Auth {
     $gebruikerFunctie = "nvt";
     $gebruikerRol = "nvt";
 
-    $this->setGebruiker($gebruikerNaam, $gebruikerWachtwoord, $gebruikerEmail, $gebruikerFunctie, $gebruikerRol);
+    $hashedWachtwoord = password_hash($gebruikerWachtwoord, PASSWORD_BCRYPT);
+
+    $this->setGebruiker($gebruikerNaam, $hashedWachtwoord, $gebruikerEmail, $gebruikerFunctie, $gebruikerRol);
     header("Location: ../../public/pages/login.php");
   }
 
@@ -23,22 +25,32 @@ class AuthContr extends Auth {
 
     $gebruiker = $this->getGebruiker($gebruikerNaam);
 
+
     if($gebruiker) {
       if($gebruikerNaam !== $gebruiker["gebruikerNaam"]) {
         echo "Foute naam"; 
         return;
       }
   
-      if($gebruikerWachtwoord !== $gebruiker["gebruikerWachtwoord"]) {
+      if(!password_verify($gebruikerWachtwoord, $gebruiker["gebruikerWachtwoord"])) {
         echo "Fout wachtwoord!"; 
         return;
       }
-  
+
+      session_start();
+      $_SESSION["gebruikerId"] = $gebruiker["gebruikerId"];
+      $_SESSION["gebruikerNaam"] = $gebruiker["gebruikerNaam"];
+
       header('location: ../../public/pages/dashboard.php');
     } else {
       echo "Kon niemand vinden";
     }
 
+  }
+
+  public function logout() {
+    session_destroy();
+    header('location: ../../public/pages/home.php');
   }
 
 }

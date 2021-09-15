@@ -13,7 +13,9 @@ class GebruikerContr extends Gebruikers {
     $gebruikerFunctie = $_POST["functie"];
     $gebruikerRol = "medewerker";
 
-    $this->setGebruiker($gebruikerNaam, $gebruikerWachtwoord, $gebruikerEmail, $gebruikerFunctie, $gebruikerRol);
+    $hashedWachtwoord = password_hash($gebruikerWachtwoord, PASSWORD_BCRYPT);
+
+    $this->setGebruiker($gebruikerNaam, $hashedWachtwoord, $gebruikerEmail, $gebruikerFunctie, $gebruikerRol);
     header("Location: ../../public/pages/personeel.php");
   }
 

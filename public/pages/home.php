@@ -8,7 +8,7 @@
     <title>Home || Panel</title> 
   </head>
   <body>
-    <div class="container">
+    <div class="home__container">
       <header>
         <div class="logo">Panel</div>
         <nav>

@@ -22,7 +22,7 @@
 
     if(isset($_GET["deleteGebruikerId"])) $gebruikerController->removeGebruiker();
     if(isset($_POST["add"])) $gebruikerController->createGebruiker();
-    ?>
+    ?>  
 
     <div class="personeel__container">
       <div class="personeel__tabel">
